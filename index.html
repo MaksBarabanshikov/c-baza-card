@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>card</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="popup-wrapper">
+        <div class="popup-content">
+            <button><img src="./image/x-mark.svg" alt="закрыть"></button>
+            <form class="popup-content__form">
+                <fieldset>
+                    <legend>
+                        Оформление карты Постоянного клиента
+                    </legend>
+                    <div>
+                        <label>
+                            <span>Фамилия <sub>*</sub></span>
+                            <input required placeholder="Иванов">
+                        </label>
+                        <label>
+                            <span>Иван<sub>*</sub></span>
+                            <input required placeholder="Иванов">
+                        </label>                        <label>
+                            <span>Отчество <sub>*</sub></span>
+                            <input required placeholder="Иванов">
+                        </label>
+                        <label>
+                            <span>Дата рождения<sub>*</sub></span>
+                            <input required placeholder="Иванов">
+                            <button>
+                                <img src="./image/calendar.svg" alt="Календарь">
+                            </button>
+                        </label>
+                    </div>
+                    <div>
+                        <span>Пол <sub>*</sub></span>
+                        <label>
+                            <input type="radio" name="gender">
+                            <span>Мужской</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="gender">
+                            <span>Женский</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <span>E-mail</span>
+                            <input placeholder="mymail@mail.ru">
+                            <button>
+                                <img src="./image/faq.svg" alt="">
+                            </button>
+                        </label>
+                        <label>
+                            <span>Телефон<sub>*</sub></span>
+                            <input required value="+7 (999) 123-45-67">
+                        </label>
+                    </div>
+                    <input type="submit" value="Оформить карту">
+                </fieldset>
+            </form>
+            <div class="popup-content"></div>
+        </div>
+    </div>
+</body>
+</html>
