@@ -6,63 +6,77 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <div class="popup-wrapper">
-        <div class="popup-content">
-            <button><img src="./image/x-mark.svg" alt="закрыть"></button>
-            <form class="popup-content__form">
+<div class="popup ">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div class="popup__head">
+                <a class="popup__close">
+                    <img src="./image/x-mark.svg" alt="закрыть"/>
+                </a>
+            </div>
+            <form class="popup__form">
                 <fieldset>
-                    <legend>
+                    <legend class="popup__title">
                         Оформление карты Постоянного клиента
                     </legend>
-                    <div>
-                        <label>
-                            <span>Фамилия <sub>*</sub></span>
-                            <input required placeholder="Иванов">
+                    <fieldset class="popup__fio">
+                        <label class="popup__label label">
+                            <span class="label__title">Фамилия <sup>*</sup></span>
+                            <input class="label__input" type="text" required placeholder="Иванов"/>
                         </label>
-                        <label>
-                            <span>Иван<sub>*</sub></span>
-                            <input required placeholder="Иванов">
-                        </label>                        <label>
-                            <span>Отчество <sub>*</sub></span>
-                            <input required placeholder="Иванов">
+                        <label class="popup__label label">
+                            <span class="label__title">Имя<sup>*</sup></span>
+                            <input class="label__input" type="text" required placeholder="Имя"/>
                         </label>
-                        <label>
-                            <span>Дата рождения<sub>*</sub></span>
-                            <input required placeholder="Иванов">
-                            <button>
-                                <img src="./image/calendar.svg" alt="Календарь">
-                            </button>
+                        <label class="popup__label label">
+                            <span class="label__title">Отчество <sup>*</sup></span>
+                            <input class="label__input" type="text" required placeholder="Иванович"/>
                         </label>
-                    </div>
-                    <div>
-                        <span>Пол <sub>*</sub></span>
-                        <label>
-                            <input type="radio" name="gender">
-                            <span>Мужской</span>
+                        <label class="popup__label label">
+                            <span class="label__title">Дата рождения<sup>*</sup></span>
+                            <span class="label__wrap">
+                                <input class="label__input" type="text" required placeholder="Иванов"/>
+                                <button class="label__button">
+                                    <img src="./image/calendar.svg" alt="Календарь"/>
+                                </button>
+                            </span>
                         </label>
-                        <label>
-                            <input type="radio" name="gender">
-                            <span>Женский</span>
+                    </fieldset>
+                    <fieldset class="popup__radios">
+                        <legend>
+                            Пол <sup>*</sup>
+                        </legend>
+                        <div>
+                            <label class="popup__label label">
+                                <input class="label__radio" type="radio" checked name="gender"/>
+                                <span>Мужской</span>
+                            </label>
+                            <label class="popup__label label">
+                                <input class="label__radio" type="radio" name="gender"/>
+                                <span>Женский</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="popup__info">
+                        <label class="popup__label label">
+                            <span class="label__title">E-mail</span>
+                            <span class="label__wrap">
+                                <input class="label__input" type="email" placeholder="mymail@mail.ru"/>
+                                <button class="label__button">
+                                    <img src="./image/faq.svg" alt=""/>
+                                </button>
+                            </span>
                         </label>
-                    </div>
-                    <div>
-                        <label>
-                            <span>E-mail</span>
-                            <input placeholder="mymail@mail.ru">
-                            <button>
-                                <img src="./image/faq.svg" alt="">
-                            </button>
+                        <label class="popup__label label">
+                            <span class="label__title">Телефон<sup>*</sup></span>
+                            <input class="label__input" type="tel" required value="+7 (999) 123-45-67"/>
                         </label>
-                        <label>
-                            <span>Телефон<sub>*</sub></span>
-                            <input required value="+7 (999) 123-45-67">
-                        </label>
-                    </div>
-                    <input type="submit" value="Оформить карту">
+                    </fieldset>
+                    <input class="popup__submit" type="submit" value="Оформить карту"/>
                 </fieldset>
             </form>
-            <div class="popup-content"></div>
         </div>
     </div>
+</div>
 </body>
 </html>
