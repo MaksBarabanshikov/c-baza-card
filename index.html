@@ -3,79 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <title>card</title>
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./personal.css"> // взял с c-baza.ru
+    <link rel="stylesheet" href="./prod.css">
 </head>
 <body>
-<div class="popup ">
-    <div class="popup__wrapper">
-        <div class="popup__content">
-            <div class="popup__head">
-                <a class="popup__close">
-                    <img src="./image/x-mark.svg" alt="закрыть"/>
-                </a>
-            </div>
-            <form class="popup__form">
-                <fieldset>
-                    <legend class="popup__title">
-                        Оформление карты Постоянного клиента
-                    </legend>
-                    <fieldset class="popup__fio">
-                        <label class="popup__label label">
-                            <span class="label__title">Фамилия <sup>*</sup></span>
-                            <input class="label__input" type="text" required placeholder="Иванов"/>
-                        </label>
-                        <label class="popup__label label">
-                            <span class="label__title">Имя<sup>*</sup></span>
-                            <input class="label__input" type="text" required placeholder="Имя"/>
-                        </label>
-                        <label class="popup__label label">
-                            <span class="label__title">Отчество <sup>*</sup></span>
-                            <input class="label__input" type="text" required placeholder="Иванович"/>
-                        </label>
-                        <label class="popup__label label">
-                            <span class="label__title">Дата рождения<sup>*</sup></span>
-                            <span class="label__wrap">
-                                <input class="label__input" type="text" required placeholder="Иванов"/>
-                                <button class="label__button">
-                                    <img src="./image/calendar.svg" alt="Календарь"/>
-                                </button>
-                            </span>
-                        </label>
-                    </fieldset>
-                    <fieldset class="popup__radios">
-                        <legend>
-                            Пол <sup>*</sup>
-                        </legend>
-                        <div>
-                            <label class="popup__label label">
-                                <input class="label__radio" type="radio" checked name="gender"/>
-                                <span>Мужской</span>
-                            </label>
-                            <label class="popup__label label">
-                                <input class="label__radio" type="radio" name="gender"/>
-                                <span>Женский</span>
-                            </label>
+<div class="personal-modal personal-gift-card">
+    <div class="personal-modal__content">
+        <div class="personal-modal__close"></div>
+        <form class="personal-gift-card__form">
+            <fieldset>
+                <legend class="personal-modal__title">
+                    Оформление карты Постоянного клиента
+                </legend>
+                <fieldset class="personal-modal__fio personal-modal_col-2">
+                    <div class=" personal-profile__field">
+                        <label class="label-main">Фамилия <sup>*</sup></label>
+                        <div class="input-main__cover">
+                            <input class="input-main" required type="text" name="second_name">
                         </div>
-                    </fieldset>
-                    <fieldset class="popup__info">
-                        <label class="popup__label label">
-                            <span class="label__title">E-mail</span>
-                            <span class="label__wrap">
-                                <input class="label__input" type="email" placeholder="mymail@mail.ru"/>
-                                <button class="label__button">
-                                    <img src="./image/faq.svg" alt=""/>
-                                </button>
-                            </span>
-                        </label>
-                        <label class="popup__label label">
-                            <span class="label__title">Телефон<sup>*</sup></span>
-                            <input class="label__input" type="tel" required value="+7 (999) 123-45-67"/>
-                        </label>
-                    </fieldset>
-                    <input class="popup__submit" type="submit" value="Оформить карту"/>
+                    </div>
+                    <div class=" personal-profile__field">
+                        <label class="label-main">Имя <sup>*</sup></label>
+                        <div class="input-main__cover">
+                            <input class="input-main" required type="text" name="name">
+                        </div>
+                    </div>
+                    <div class=" personal-profile__field">
+                        <label class="label-main">Отчество <sup>*</sup></label>
+                        <div class="input-main__cover">
+                            <input class="input-main" required type="text" name="patronymic">
+                        </div>
+                    </div>
+                    <div class=" personal-profile__field">
+                        <label class="label-main">Дата рождения <sup>*</sup></label>
+                        <div class="input-main__cover">
+                            <input class="input-main" required type="text" name="patronymic">
+                            <div class="input-main__btn input-main__btn_calendar"></div>
+                        </div>
+                    </div>
                 </fieldset>
-            </form>
-        </div>
+                <fieldset class="personal-modal__radios">
+                    <legend>
+                        Пол <sup>*</sup>
+                    </legend>
+                    <div class="personal-modal_col-2">
+                        <label class="personal-modal__radio personal-radio">
+                            <input class="personal-radio__radio" type="radio" checked name="gender"/>
+                            <span>Мужской</span>
+                        </label>
+                        <label class="personal-modal__radio personal-radio">
+                            <input class="personal-radio__radio" type="radio" checked name="gender"/>
+                            <span>Женский</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="personal-modal__info personal-modal_col-2">
+                    <div class=" personal-profile__field">
+                        <label class="label-main">E-mail</label>
+                        <div class="input-main__cover">
+                            <input class="input-main"
+                                   required
+                                   type="email"
+                                   name="email"
+                                   placeholder="mymail@mail.ru"
+                            >
+                            <div class="input-main__btn input-main__btn_faq"></div>
+                        </div>
+                    </div>
+                    <div class=" personal-profile__field">
+                        <label class="label-main">Телефон<sup>*</sup></label>
+                        <div class="input-main__cover">
+                            <input class="input-main" type="tel" name="phone" id="authMaskPhone" value="">
+                        </div>
+                        <span id="notify_user"></span>
+                    </div>
+                </fieldset>
+                <div class="personal-authorization__btns">
+                    <button class="btn-main btn-main_filled" type="submit" id="load_gift">Оформить карту</button>
+                </div>
+            </fieldset>
+        </form>
     </div>
 </div>
 </body>
